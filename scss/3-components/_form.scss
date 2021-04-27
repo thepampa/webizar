@@ -1,0 +1,21 @@
+.form {
+    font-size: 2rem;
+    max-width: 100%;
+    
+    &__control {
+        font-size: 1.8rem;
+    }
+    &__select {
+        font-size: 1.8rem;
+    }
+    &__button {
+        background-color: $colorPrincipal;
+        border: $colorPrincipal;
+        font-size: 2rem;
+
+        &:hover {
+            background-color: $colorSecondary;
+            border: $colorSecondary;
+        }
+    }
+}

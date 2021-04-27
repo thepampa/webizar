@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contacto - Webiz.AR</title>
+    <meta name="description" content="Contactate con Webiz.AR para que desarrollemos el sitio web de tu emprendimiento">
+    <meta name="keywords" content="Contacto, contactate, dejanos un mensaje, escribinos, más info, información">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous">
+    <script src="https://kit.fontawesome.com/d86d437db0.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+    <header class="header">
+        <a href="./index.html" class="header__logo"><img class="header__image" src="./assets/logowebizaroblanco.png" alt="Logo Webiz.AR"></a>
+        <input type="checkbox" class="header__checkbox">
+        <i class="fas fa-bars header__hamburguer"></i>
+        <i class="fas fa-times header__x"></i>
+        <nav class="header__menu ">
+            <ul class="header__list">
+                <li class="header__item"><a href="index.html" class=" header__link">Inicio</a></li>
+                <li class="header__item"><a href="nosotros.html" class="header__link">Nosotros</a></li>
+                <li class="header__item"><a href="servicios.html" class="header__link">Servicios</a></li>
+                <li class="header__item"><a href="portfolio.html" class="header__link">Portfolio</a></li>
+                <li class="header__item"><a href="contacto.html" class="header__link--here">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section class="banner--pages">
+            <div class="banner__overlay"></div>
+            <div class="banner__content banner__content--pages">
+                <h1 class="banner__title banner__title--pages">Contactanos</h1>
+                <h3 class="banner__subtitle banner__subtitle--pages">Escribinos para recibir más info</h3>
+                <p class="banner__text banner__text--pages">Mandanos la información de tu emprendimiento y muy pronto te estaremos contactando.</p>
+            </div>
+        </section>
+        <section class="contact">
+            <article class="contact__form">
+                <h2>Solicitar información</h2>
+                <form class="row g-3 form">
+                    <div class="col-md-6">
+                      <label for="inputName" class="form-label">Nombre</label>
+                      <input type="text" class="form-control form__control" id="inputName">
+                    </div>
+                    <div class="col-md-6">
+                      <label for="inputLName" class="form-label">Apellido</label>
+                      <input type="password" class="form-control form__control" id="inputLName">
+                    </div>
+                    <div class="col-12">
+                        <label for="inputEmail4" class="form-label">Email</label>
+                        <input type="email" class="form-control form__control" id="inputEmail4" placeholder="email@name.com">                        
+                    </div>
+                    <div class="col-md-5">
+                      <label for="inputCity" class="form-label">Localidad</label>
+                      <input type="text" class="form-control form__control" id="inputCity">
+                    </div>
+                    <div class="col-md-4">
+                      <label for="inputState" class="form-label">Provincia</label>
+                      <select id="inputState" class="form-select form__select">
+                        <option selected>Elegir...</option>
+                        <option>Ciudad Autónoma de Buenos Aires</option>
+                        <option>Buenos Aires</option>
+                        <option>Interior</option>
+                      </select>
+                    </div>
+                    <div class="col-md-3">
+                      <label for="inputZip" class="form-label">Código Postal</label>
+                      <input type="text" class="form-control form__control" id="inputZip">
+                    </div>
+                    <div class="col-12">
+                        <label for="exampleFormControlTextarea1" class="form-label">Mensaje</label>
+                        <textarea class="form-control form__control" id="exampleFormControlTextarea1" rows="4"></textarea>
+                      </div>
+                    <div class="col-12">
+                      <input type="submit" class="btn btn-lg btn-primary form__button" value="Enviar"/>
+                    </div>
+                  </form>
+            </article>
+            <article class="contact__touch">
+                <h2>Mantenernos en contacto</h2>
+            </article>
+        </section>
+    </main>
+    <footer class="footer">
+        <div class="footer__basic">
+            <h5>Webizar</h5>
+            <p>Somos una agencia que ayuda al negocio a crecer y desarrollarse en el mundo online</p>
+            <ul class="listRRSS">
+                <li><a href=""><i class="fab fa-facebook-square listRRSS__icon"></i></a></li>
+                <li><a href=""><i class="fab fa-twitter-square listRRSS__icon"></i></a></li>
+                <li><a href=""><i class="fab fa-instagram-square listRRSS__icon"></i></a></li>
+                <li><a href=""><i class="fab fa-linkedin listRRSS__icon"></i></a></li>
+            </ul>
+        </div>
+        <div class="footer__menu">
+            <h5>Menú</h5>
+            <ul class="footer__nav">
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="nosotros.html">Nosotros</a></li>
+                <li><a href="servicios.html">Servicios</a></li>
+                <li><a href="portfolio.html">Portfolio</a></li>
+                <li><a href="contacto.html">Contacto</a></li>
+            </ul>
+        </div>
+        <div class="footer__contact">
+            <h5>Mantenernos en contacto</h5>
+            <div class="footer__info">
+                <p>Ciudad Autónoma de Buenos Aires</p>
+                <p>011-5252-5252</p>
+            </div>
+        </div>
+    </footer>
+
+
+    <!-- SCRIPTS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js" integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf" crossorigin="anonymous"></script>
+</body>
+</html>

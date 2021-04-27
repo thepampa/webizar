@@ -1,0 +1,110 @@
+// EXTENDS
+%checkbox {
+    position: absolute;
+    right: 5vw;
+    top: 3vh;
+    width: auto;
+    height: 4vh;
+    width: 4vh;
+    @include response-to ($widthDesktop) {
+        display: none;
+    }
+}
+
+%burguerButton {
+    font-size: 4vh;
+    pointer-events: none;
+    color: $colorWhite;
+}
+
+
+%link {
+    position: relative;
+    font-weight: bold;
+    text-decoration: $menuStandard;
+    @include hoverSub;
+}
+
+// SCSS
+.header {
+    position: relative;
+    // width: 100vw;
+    background: $colorPrincipal;
+    padding: $layoutPadding;
+    
+    @include response-to ($widthDesktop) {
+        @include flexRow;
+    }
+
+    &__image {
+        height: 6vh;
+
+        @include response-to ($widthDesktop) {
+            height: auto;
+            width: 40vw;
+            max-width: 200px;
+        }
+    }
+    &__menu {
+        display: none;
+        @include response-to ($widthDesktop) {
+            display: initial;
+        }
+    }
+
+    &__checkbox {
+        @extend %checkbox;
+        opacity: 0;
+
+        &:checked ~ .header__menu {
+            display: block;
+            // padding: 3vh 0;
+            // z-index: 10;
+            height: 30vh;
+          }
+
+        &:checked ~ .header__hamburguer {
+           display: none
+        }
+        &:not(:checked) ~ .header__x {
+            display: none;
+        }
+    }
+
+    &__hamburguer, .fa-bars {
+        @extend %checkbox;
+        @extend %burguerButton;
+    }
+
+    &__x, .fa-times  {
+        @extend %checkbox;
+        @extend %burguerButton;
+    }
+
+    &__list {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        align-items: center;
+        list-style: $menuStandard;
+        padding: 0;
+        margin: 0;
+        height: 100%;
+
+        @include response-to ($widthDesktop) {
+            @include flexRow;
+            width: 60vw
+        }
+    }
+
+    &__link {
+        @extend %link;
+        color: $colorLinkMenu;
+        
+
+        &--here {
+            @extend %link;
+            color: $colorWhite;
+        }
+    }
+}

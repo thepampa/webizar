@@ -1,0 +1,117 @@
+.footer {
+    background-color: $colorSecondary;
+    @include grid;
+    color: $colorWhite;
+    grid-template-rows: auto 2fr 2fr 2fr auto;
+    @include response-to ($widthTablet){
+        text-align: center;
+    }
+
+    @include response-to ($widthDesktop) {
+        grid-template-rows: 1fr 2fr 2fr 2fr 1fr;
+    }
+    
+    
+
+    &__basic {
+        grid-column: 2 / 5;
+        grid-row: 2 / 3;
+
+        @include response-to ($widthDesktop) {
+            grid-column: 2 / 3;
+            grid-row: 2 / 5;
+        }
+
+
+
+        h5 {
+            font-size: 2rem;
+            padding-bottom: 2vh;
+        }
+
+        p {
+            font-size: 1.4rem;
+        } 
+    }
+
+    .listRRSS {
+        display: flex;
+        list-style: $menuStandard;
+        width: 100%;
+        justify-content: space-between;
+        color: white;
+        margin: 0;
+        padding: 0;
+        
+        &__icon {
+            color: white;
+            padding-top: 2vh;
+            font-size: 2.5rem;
+    
+        }
+    }
+
+
+    &__menu {
+        grid-column: 2 / 5;
+        grid-row: 3 / 4;
+
+        @include response-to ($widthDesktop) {
+            grid-column: 3 / 4;
+            grid-row: 2 / 5;
+        }
+        h5 {
+            font-size: 2rem;
+            padding-bottom: 2vh;
+
+        }
+        width: 100%;
+    }
+
+    &__nav {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        list-style: $menuStandard;
+        width: 100%;
+        color: white;
+        margin: 0;
+        padding: 0;
+
+        a {
+            color: white;
+            text-decoration: $menuStandard;
+        }
+    }
+
+    &__contact {
+        grid-column: 2 / 5;
+        grid-row: 4 / 5;
+
+        @include response-to ($widthDesktop) {
+            grid-column: 4 / 5;
+            grid-row: 2 / 5;
+        }
+        h5 {
+            font-size: 2rem;
+            padding-bottom: 2vh;
+
+        }
+        width: 100%;
+    }
+
+    &__info {
+        width: 100%;
+        color: white;
+        margin: 0;
+        padding: 0;
+
+        p {
+            font-size: 1.4rem;
+        } 
+       
+    }
+
+
+
+}

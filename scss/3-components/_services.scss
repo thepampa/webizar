@@ -1,0 +1,149 @@
+.services {
+    // background-image: linear-gradient(180deg, $colorPrincipal 0%,$colorSecondary 100%);
+    // position: relative;
+    @include grid;
+    grid-template-rows: 1fr 2fr 2fr auto 1fr;
+    align-items: space-evenly;
+    
+    @include response-to ($widthDesktop) {
+        align-content: space-evenly;
+    }
+
+    &--us {
+        grid-template-rows: 1fr 2fr 2fr auto auto 1fr;
+    }
+
+    &__title{
+        grid-column: 2 / span 3;
+        grid-row: 2 / 3;
+        margin: 0;
+        padding: 0;
+        font-size: 2.2rem;
+        text-align: center;
+        padding: 2vh 0;
+
+        @include response-to ($widthDesktop) {
+            font-size: 2.2rem * 1.2;
+        }
+    }
+
+    &__description {
+        grid-column: 2 / span 3;
+        grid-row: 3 / 4;
+        margin: 0;
+        padding: 0;
+        text-align: center;
+        font-size: 1.6rem;
+        padding: 2vh 0;
+    }
+
+    &__content {
+        grid-column: 2 / span 3;
+        grid-row: 4 / 5;
+        margin: 0;
+        padding-top: 2vh;
+        padding-bottom: 2vh;
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        align-content: stretch;
+        gap: 2.5rem;
+        max-width: 100vw;
+
+        @include response-to ($widthTablet) {
+            grid-template-columns: repeat(2, 1fr);
+        }
+
+        @include response-to ($widthDesktop) {
+            grid-template-columns: repeat(3, 1fr);
+        }
+
+        &--us {
+
+            margin-top: -10vh;
+            @include response-to ($widthTablet) {
+                grid-template-columns: repeat(1, 1fr);
+            }
+            @include response-to ($widthDesktop) {
+                grid-template-columns: repeat(3, 1fr);
+            }
+        }
+
+    }
+
+    &__card {
+        box-shadow: 0 10px 30px 0 #d0d8ead9;
+        padding: 2vh 5vw;
+        min-height: 30vh;
+        
+    }
+
+    &__icon {
+        font-size: 4.2rem;
+        color: $colorSecondary;
+    }
+
+    &__underline {
+        width: 50px;
+        border-top: 7px solid $colorSecondary;
+        display: block;
+    }
+
+    &__body {
+        padding: 2vh 0;
+        display: grid;
+        grid-template-rows: auto 30% 60% auto;
+        height: 100%;
+
+        // &--portfolio {
+        //     grid-template-rows: auto 60% auto auto auto;
+        //     height: auto;
+
+        //     img {
+        //         grid-row: 2 / 3;
+        //     }
+
+        //     h5 {
+        //         grid-row: 3 / 4;
+        //     }
+
+        //     p {
+        //         grid-row: 4 / 5;
+        //     }
+        // }
+
+
+
+        h5 {
+            font-size: 1.6rem;
+            grid-row: 2 / 3;
+        }
+
+        p {
+            grid-row: 3 / 4;
+        }
+    }
+
+    &__process {
+        grid-row: 5/6;
+        grid-column: 2 / span 3;
+        position: relative;
+        @include grid;
+        grid-template-rows: 1fr 2fr auto auto 1fr;
+        grid-template-columns: none;
+        align-items: space-evenly;
+        @include response-to ($widthDesktop) {
+            align-content: space-evenly;
+        }
+
+        h4 {
+            font-size: 4rem;
+            font-family: $fontTitle;
+            color: $colorAccent;
+        }
+    }
+}
+
+
+.card-body h5 {
+    font-size: 1.8rem;
+}

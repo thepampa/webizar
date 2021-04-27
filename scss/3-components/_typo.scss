@@ -1,0 +1,15 @@
+// TÍTULOS
+
+h1 {
+    font-family: $fontTitle;
+    font-weight: bold;
+}
+
+h2, h3, h4, h5, h6 {
+    font-family: $fontSubTitle;
+}
+
+p {
+    font-family: $fontBase;
+    font-weight: 300;
+}

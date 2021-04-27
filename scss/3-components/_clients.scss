@@ -1,0 +1,59 @@
+.clients {
+    @include grid;
+    grid-template-rows: 1fr 2fr 2fr auto 1fr;
+    align-items: space-evenly;
+    @include response-to ($widthDesktop) {
+        align-content: space-evenly;
+    }
+    &__title{
+        grid-column: 2 / span 3;
+        grid-row: 2 / 3;
+        margin: 0;
+        font-size: 2.2rem;
+        text-align: center;
+        padding: 2vh 0;
+
+        @include response-to ($widthDesktop) {
+            font-size: 2.2rem * 1.2;
+        }
+    }
+
+    &__description {
+        grid-column: 2 / span 3;
+        grid-row: 3 / 4;
+        margin: 0;
+        text-align: center;
+        font-size: 1.6rem;
+        padding: 2vh 0;
+    }
+
+    &__content {
+        width: 100%;
+        grid-column: 2 / span 3;
+        grid-row: 4 / 5;
+        margin: 0;
+        padding-top: 2vh;
+        padding-bottom: 2vh;
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        // align-content: stretch;
+        gap: 2.5rem;
+        
+        
+        align-items: center;
+        justify-items: center;
+
+        @include response-to ($widthTablet) {
+            grid-template-columns: repeat(4, 1fr);
+        }
+        
+    }
+
+
+
+    &__img {
+        width: 200px;
+    }
+
+   
+}

@@ -1,0 +1,82 @@
+// @mixin paddingNormal {
+//     padding-left: 10vw;
+//     padding-right: 10vw;
+// }
+
+
+// MIXINS FLEXBOX
+
+@mixin flexColum {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+@mixin flexRow {
+    display: flex;
+    flex-direction: row;
+    height: auto;
+    justify-content: space-around;
+    align-items: center;
+}
+
+// MIXINS LAYOUT
+
+@mixin center {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+// MIXINS GRID
+@mixin grid {
+    display: grid;
+    align-content: space-around;
+    align-items: center;
+    justify-items: center;
+    grid-template-columns: 1fr 3fr 3fr 3fr 1fr;
+    grid-template-rows: auto auto auto auto auto;
+        
+}
+
+
+// DECORATION MIXINS
+@mixin hoverSub {
+    &::before {
+        content: '';
+        position: absolute;
+        bottom: -5px;
+        left: 0;
+        width: 100%;
+        height: 3px;
+        background: linear-gradient(180deg, rgba(78,17,102,1) 35%, rgba(237,52,86,1) 80%);
+        z-index: 1;
+        transform: scaleX(0);
+        transform-origin: center;
+        transition: 0.5s ease-in-out;
+      }
+    &:hover {
+        color: $colorWhite;
+        &::before {
+            transform: scaleX(1);
+          }
+    }
+}
+
+// MEDIAQUERY MIXINS
+
+
+@mixin response-to($width) {
+    @media only screen and (min-width: $width) {
+      @content;
+    }
+  }
+
+//   @mixin textD {
+//     text-decoration: none;
+//   }
+
+//   @mixin listS{
+//       list-style: none;
+//   }
