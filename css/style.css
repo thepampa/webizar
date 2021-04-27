@@ -336,7 +336,7 @@ p {
 .banner, .banner--pages {
   position: relative;
   background-color: #fff;
-  background-image: url(../../assets/bannerdesktop.jpg);
+  background-image: url(../assets/bannerdesktop.jpg);
   max-width: 100vw;
   background-position: center center;
   background-repeat: no-repeat;
@@ -358,7 +358,7 @@ p {
       align-content: space-evenly; } }
 
 .banner--pages {
-  background-image: url(../../assets/bannerpages.jpg);
+  background-image: url(/../assets/bannerpages.jpg);
   height: 50vh; }
 .banner__overlay::before {
   content: "";
