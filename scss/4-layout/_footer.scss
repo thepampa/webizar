@@ -3,6 +3,7 @@
     @include grid;
     color: $colorWhite;
     grid-template-rows: auto 2fr 2fr 2fr auto;
+    gap: 2vh;
     @include response-to ($widthTablet){
         text-align: center;
     }
