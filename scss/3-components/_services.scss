@@ -70,6 +70,17 @@
 
     }
 
+    &__article {
+        &:hover,
+        &:focus
+        {
+            transition: all 0.3s ease-out;
+            box-shadow: 0px 12px 40px $colorBackground;
+            top: -4px;
+            border: 1px solid $colorSecondary;
+          }
+    }
+
     &__card {
         box-shadow: 0 10px 30px 0 #d0d8ead9;
         padding: 2vh 5vw;
@@ -140,6 +151,11 @@
             font-family: $fontTitle;
             color: $colorAccent;
         }
+    }
+
+    .card-title:hover,
+    .card-text:hover {
+        color: $colorAccent;
     }
 }
 
