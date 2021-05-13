@@ -136,9 +136,17 @@
         margin: 0;
         padding: 0;
 
+
         a {
             color: white;
             text-decoration: $menuStandard;
+            position: relative;
+            @include hoverSub;
+
+            &::before {
+                background: #fff;
+            }
+
         }
     }
 
