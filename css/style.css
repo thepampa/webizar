@@ -489,8 +489,8 @@ p {
     border: 1px solid #4e1166; }
   .services__card {
     box-shadow: 0 10px 30px 0 #d0d8ead9;
-    padding: 2vh 5vw;
-    min-height: 30vh; }
+    padding: 2vh 3vw;
+    height: 30vh; }
   .services__icon {
     font-size: 4.2rem;
     color: #4e1166; }
