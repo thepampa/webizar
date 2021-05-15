@@ -490,7 +490,7 @@ p {
   .services__card {
     box-shadow: 0 10px 30px 0 #d0d8ead9;
     padding: 2vh 3vw;
-    height: 30vh; }
+    min-height: 30vh; }
   .services__icon {
     font-size: 4.2rem;
     color: #4e1166; }
@@ -508,6 +508,10 @@ p {
       grid-row: 2 / 3; }
     .services__body p {
       grid-row: 3 / 4; }
+  .services__title--portfolio {
+    padding-top: 2vh; }
+  .services__text--portfolio {
+    padding-top: 2vh; }
   .services__process {
     grid-row: 5/6;
     grid-column: 2 / span 3;
@@ -533,7 +537,7 @@ p {
     color: #fa7035; }
 
 .card-body h5 {
-  font-size: 1.8rem; }
+  font-size: 2.2rem; }
 
 .clients {
   display: grid;
@@ -578,9 +582,21 @@ p {
     justify-items: center; }
     @media only screen and (min-width: 768px) {
       .clients__content {
+        grid-template-columns: repeat(2, 1fr); } }
+    @media only screen and (min-width: 1024px) {
+      .clients__content {
         grid-template-columns: repeat(4, 1fr); } }
+  .clients__article {
+    box-shadow: 0 10px 30px 0 #d0d8ead9;
+    padding: 2vh 3vw; }
+    .clients__article:hover, .clients__article:focus {
+      transition: all 0.3s ease-out;
+      box-shadow: 0px 12px 40px rgba(78, 17, 102, 0.25);
+      top: -4px;
+      border: 1px solid #4e1166; }
   .clients__img {
-    width: 200px; }
+    max-width: 200px;
+    height: 8vh; }
 
 .form {
   font-size: 2rem;

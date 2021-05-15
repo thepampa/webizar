@@ -84,7 +84,7 @@
     &__card {
         box-shadow: 0 10px 30px 0 #d0d8ead9;
         padding: 2vh 3vw;
-        height: 30vh;
+        min-height: 30vh;
         
     }
 
@@ -132,8 +132,21 @@
         p {
             grid-row: 3 / 4;
         }
+
+       
     }
 
+    &__title{
+        &--portfolio{
+            padding-top: 2vh;
+        }
+    }
+
+    &__text {
+        &--portfolio {
+            padding-top:2vh ;
+        }
+    }
     &__process {
         grid-row: 5/6;
         grid-column: 2 / span 3;
@@ -161,5 +174,5 @@
 
 
 .card-body h5 {
-    font-size: 1.8rem;
+    font-size: 2.2rem;
 }
