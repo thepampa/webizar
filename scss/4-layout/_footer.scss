@@ -41,14 +41,71 @@
         width: 100%;
         justify-content: space-between;
         color: white;
-        margin: 0;
         padding: 0;
+        text-align: center;
+        padding: 0;
+        list-style: none;
+
+        li {
+            display: inline-block;
+            margin: 0.15em;
+            position: relative;
+            font-size: 1.6rem;
+        }
+
+        a {
+            &:before {
+                @include transformScale();
+                content: " ";
+                width: 60px;
+                height: 60px;
+                border-radius: 100%;
+                display: block;
+                background: #fff;
+                transition: all $timing ease-out;
+            }
+
+            &:before {
+                @include transformScale();
+                content: " ";
+                width: 60px;
+                height: 60px;
+                border-radius: 100%;
+                display: block;
+                background: #fff;
+                transition: all $timing ease-out;
+            }
+            
+            &:hover:before {
+                transform: scale(0);
+                transition: all $timing ease-in;
+            }
+            
+            &:hover i {
+                @include transformScale(2.2);
+                color: #fff;
+                background: #fff;
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: transparent;
+                transition: all $timing ease-in;
+                position: absolute;
+                left: 50%;
+                top: 50%;
+                transform: translate(-50%, -50%);
+                font-size: 5rem;
+                
+            }
+        }
         
         &__icon {
-            color: white;
-            padding-top: 2vh;
-            font-size: 2.5rem;
-    
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+            transition: all $timing ease-out;
+            color: $colorSecondary;
+            font-size: 2.4rem;
+
         }
     }
 
@@ -79,9 +136,17 @@
         margin: 0;
         padding: 0;
 
+
         a {
             color: white;
             text-decoration: $menuStandard;
+            position: relative;
+            @include hoverSub;
+
+            &::before {
+                background: #fff;
+            }
+
         }
     }
 

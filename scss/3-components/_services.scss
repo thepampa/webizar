@@ -70,9 +70,20 @@
 
     }
 
+    &__article {
+        &:hover,
+        &:focus
+        {
+            transition: all 0.3s ease-out;
+            box-shadow: 0px 12px 40px $colorBackground;
+            top: -4px;
+            border: 1px solid $colorSecondary;
+          }
+    }
+
     &__card {
         box-shadow: 0 10px 30px 0 #d0d8ead9;
-        padding: 2vh 5vw;
+        padding: 2vh 3vw;
         min-height: 30vh;
         
     }
@@ -121,8 +132,21 @@
         p {
             grid-row: 3 / 4;
         }
+
+       
     }
 
+    &__title{
+        &--portfolio{
+            padding-top: 2vh;
+        }
+    }
+
+    &__text {
+        &--portfolio {
+            padding-top:2vh ;
+        }
+    }
     &__process {
         grid-row: 5/6;
         grid-column: 2 / span 3;
@@ -141,9 +165,14 @@
             color: $colorAccent;
         }
     }
+
+    .card-title:hover,
+    .card-text:hover {
+        color: $colorAccent;
+    }
 }
 
 
 .card-body h5 {
-    font-size: 1.8rem;
+    font-size: 2.2rem;
 }

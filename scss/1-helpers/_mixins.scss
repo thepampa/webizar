@@ -64,6 +64,12 @@
     }
 }
 
+@mixin transformScale($size: 1) {
+  transform: scale($size);
+  -ms-transform: scale($size);
+  -webkit-transform: scale($size);
+}
+
 // MEDIAQUERY MIXINS
 
 

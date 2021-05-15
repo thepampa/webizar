@@ -482,9 +482,14 @@ p {
       @media only screen and (min-width: 1024px) {
         .services__content--us {
           grid-template-columns: repeat(3, 1fr); } }
+  .services__article:hover, .services__article:focus {
+    transition: all 0.3s ease-out;
+    box-shadow: 0px 12px 40px rgba(78, 17, 102, 0.25);
+    top: -4px;
+    border: 1px solid #4e1166; }
   .services__card {
     box-shadow: 0 10px 30px 0 #d0d8ead9;
-    padding: 2vh 5vw;
+    padding: 2vh 3vw;
     min-height: 30vh; }
   .services__icon {
     font-size: 4.2rem;
@@ -503,6 +508,10 @@ p {
       grid-row: 2 / 3; }
     .services__body p {
       grid-row: 3 / 4; }
+  .services__title--portfolio {
+    padding-top: 2vh; }
+  .services__text--portfolio {
+    padding-top: 2vh; }
   .services__process {
     grid-row: 5/6;
     grid-column: 2 / span 3;
@@ -523,9 +532,12 @@ p {
       font-size: 4rem;
       font-family: "Oswald", sans-serif;
       color: #fa7035; }
+  .services .card-title:hover,
+  .services .card-text:hover {
+    color: #fa7035; }
 
 .card-body h5 {
-  font-size: 1.8rem; }
+  font-size: 2.2rem; }
 
 .clients {
   display: grid;
@@ -570,9 +582,21 @@ p {
     justify-items: center; }
     @media only screen and (min-width: 768px) {
       .clients__content {
+        grid-template-columns: repeat(2, 1fr); } }
+    @media only screen and (min-width: 1024px) {
+      .clients__content {
         grid-template-columns: repeat(4, 1fr); } }
+  .clients__article {
+    box-shadow: 0 10px 30px 0 #d0d8ead9;
+    padding: 2vh 3vw; }
+    .clients__article:hover, .clients__article:focus {
+      transition: all 0.3s ease-out;
+      box-shadow: 0px 12px 40px rgba(78, 17, 102, 0.25);
+      top: -4px;
+      border: 1px solid #4e1166; }
   .clients__img {
-    width: 200px; }
+    max-width: 200px;
+    height: 8vh; }
 
 .form {
   font-size: 2rem;
@@ -715,12 +739,62 @@ p {
     width: 100%;
     justify-content: space-between;
     color: white;
-    margin: 0;
-    padding: 0; }
+    padding: 0;
+    text-align: center;
+    padding: 0;
+    list-style: none; }
+    .footer .listRRSS li {
+      display: inline-block;
+      margin: 0.15em;
+      position: relative;
+      font-size: 1.6rem; }
+    .footer .listRRSS a:before {
+      transform: scale(1);
+      -ms-transform: scale(1);
+      -webkit-transform: scale(1);
+      content: " ";
+      width: 60px;
+      height: 60px;
+      border-radius: 100%;
+      display: block;
+      background: #fff;
+      transition: all 265ms ease-out; }
+    .footer .listRRSS a:before {
+      transform: scale(1);
+      -ms-transform: scale(1);
+      -webkit-transform: scale(1);
+      content: " ";
+      width: 60px;
+      height: 60px;
+      border-radius: 100%;
+      display: block;
+      background: #fff;
+      transition: all 265ms ease-out; }
+    .footer .listRRSS a:hover:before {
+      transform: scale(0);
+      transition: all 265ms ease-in; }
+    .footer .listRRSS a:hover i {
+      transform: scale(2.2);
+      -ms-transform: scale(2.2);
+      -webkit-transform: scale(2.2);
+      color: #fff;
+      background: #fff;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      transition: all 265ms ease-in;
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+      font-size: 5rem; }
     .footer .listRRSS__icon {
-      color: white;
-      padding-top: 2vh;
-      font-size: 2.5rem; }
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+      transition: all 265ms ease-out;
+      color: #4e1166;
+      font-size: 2.4rem; }
   .footer__menu {
     grid-column: 2 / 5;
     grid-row: 3 / 4;
@@ -743,7 +817,26 @@ p {
     padding: 0; }
     .footer__nav a {
       color: white;
-      text-decoration: none; }
+      text-decoration: none;
+      position: relative; }
+      .footer__nav a::before {
+        content: '';
+        position: absolute;
+        bottom: -5px;
+        left: 0;
+        width: 100%;
+        height: 3px;
+        background: linear-gradient(180deg, #4e1166 35%, #ed3456 80%);
+        z-index: 1;
+        transform: scaleX(0);
+        transform-origin: center;
+        transition: 0.5s ease-in-out; }
+      .footer__nav a:hover {
+        color: #fff; }
+        .footer__nav a:hover::before {
+          transform: scaleX(1); }
+      .footer__nav a::before {
+        background: #fff; }
   .footer__contact {
     grid-column: 2 / 5;
     grid-row: 4 / 5;
