@@ -883,24 +883,17 @@ p {
       .contact__touch {
         grid-column: 3/4; } }
 
-.s404 {
-  width: 100%;
+.new404 {
   display: flex;
   flex-direction: column;
-  justify-content: space-around;
-  align-items: center; }
-  .s404__image {
-    width: 80vw; }
-  .s404__text {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: 100vw; }
+  justify-content: center;
+  text-align: center; }
   @media only screen and (min-width: 1024px) {
-    .s404 {
-      min-height: 80vh;
-      flex-direction: row; }
-      .s404__image {
-        width: 50vw; }
-      .s404__text {
-        width: auto; } }
+    .new404 {
+      flex-direction: row;
+      justify-content: space-evenly;
+      align-items: center; }
+      .new404__section {
+        width: 50%; } }
+  .new404__image {
+    max-width: 100%; }
